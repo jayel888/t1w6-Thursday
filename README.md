@@ -1,5 +1,5 @@
 ## Control Flow
-Order in whichi lines of code are executed in a program.
+Order in which lines of code are executed in a program.
 
 print("Hello, welcome to programming with Python")
 
@@ -61,3 +61,79 @@ Does nothing, just passes for now. Syntax error if line is commented out.
 
 # Boolean Operators
 AND, OR, NOT. Operands needs to be boolean as well.
+
+age = 20
+has_permission = False
+
+if age >= 18:
+    if has_permission:
+        print("Access Granted.")
+    else:
+        print("Access Denied.")
+else:
+    print("Access Denied")
+
+if age >= 18 and has_permission:
+    print("Access Granted.")
+else:
+    print("Access denied.")
+
+# Ternary Operator
+Condense series of code to one line, where applicable
+
+print("Access Granted.") if age >= 18 and has_permission else print("Access denied.")
+
+temperature = 30
+
+if temperature > 30:
+    message = "it's hot outside"
+else:
+    message = "it's not hot outside"
+
+print (message)
+
+message = "It's hot outside" if temperature > 30 else "it's not hot outside"
+
+print(message)
+
+# Match-case / Switch-case
+Control flow, similar to switch statement in other programming languages
+
+day_number = 3
+
+match day_number:
+    case 1:
+        day_name = "Monday"
+    case 2:
+        day_name = "Tuesday"
+    case 3:
+        day_name = "Wednesday"
+    case 4:
+        day_name = "Thursday"
+
+print(day_name)
+
+# Activity
+Write a python scipt that asks the user to input a numerical score and categorises it into grades (A, B, C, D, E, F) based on the following criteria
+90-100: A
+80-89: B
+70-79: C
+60-69: D
+<60 = F
+
+#Prompt the user to enter a score
+score = int(input("Enter the Score (0-100): "))
+
+# Determines the grade based on the score
+if score >= 90 and score <= 100:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+print (f"The grade for {score} is {grade}")
